@@ -46,7 +46,10 @@ def display_data(opt):
 
         # NOTE: If you want to look at the data from here rather than calling
         # world.display() you could access world.acts[0] directly
-        print(world.display() + '\n~~')
+        # print(world.display() + '\n~~')
+        query = world.acts[0]['text']
+        response = world.acts[1]['text']
+        print(f'{query} ||| {response}')
 
         if world.epoch_done():
             print('EPOCH DONE')
